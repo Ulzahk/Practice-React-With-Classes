@@ -7,6 +7,8 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.css";
+import "./global.css";
 import Badge from "./components/Badge.jsx";
 
 const element = <h1>Good Day, Platzi Badges!</h1>;
