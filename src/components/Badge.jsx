@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import confLogo from "../images/badge-header.svg";
 import "./styles/Badge.css";
 
-class Badge extends React.Component {
+export default class Badge extends Component {
   render() {
     const { firstName, lastName, avatarUrl, jobTitle, twitter } = this.props;
     return (
@@ -27,5 +27,3 @@ class Badge extends React.Component {
     );
   }
 }
-
-export default Badge;
