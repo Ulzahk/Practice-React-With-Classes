@@ -16,4 +16,13 @@ const element = <h1>Good Day, Platzi Badges!</h1>;
 const container = document.getElementById("app");
 
 // ReactDOM.render(__qué__, __dónde__);
-ReactDOM.render(<Badge />, container);
+ReactDOM.render(
+  <Badge
+    avatarUrl="https://avatars.githubusercontent.com/u/46821988?v=4"
+    firstName="Francisco"
+    lastName="Suarez"
+    jobTitle="Backend Developer"
+    twitter="Ulzahk"
+  />,
+  container
+);
