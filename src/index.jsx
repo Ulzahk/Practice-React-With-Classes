@@ -9,7 +9,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Badge from "./components/Badge.jsx";
 
-const element = <h1>Hello, Platzi Badges!</h1>;
+const element = <h1>Good Day, Platzi Badges!</h1>;
 
 const container = document.getElementById("app");
 
