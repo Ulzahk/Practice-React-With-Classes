@@ -5,7 +5,25 @@ import BadgeForm from "../components/BadgeForm";
 import logo from "../images/badge-header.svg";
 import "./styles/BadgeNew.css";
 export default class BadgeNew extends Component {
+  state = {
+    form: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      jobTitle: "",
+      twitter: "",
+    },
+  };
+  handleChange = event => {
+    const nextForm = this.state.form;
+    nextForm[event.target.name] = event.target.value;
+    this.setState({
+      ...this.state.form,
+      [event.target.name]: event.target.value,
+    });
+  };
   render() {
+    const { form } = this.state;
     return (
       <div>
         <Navbar />
@@ -17,14 +35,17 @@ export default class BadgeNew extends Component {
             <div className="col-6">
               <Badge
                 avatarUrl="https://avatars.githubusercontent.com/u/46821988?v=4"
-                firstName="Francisco"
-                lastName="Suarez"
-                jobTitle="Backend Developer"
-                twitter="Ulzahk"
+                firstName={form.firstName}
+                lastName={form.lastName}
+                jobTitle={form.jobTitle}
+                twitter={form.twitter}
               />
             </div>
             <div className="col-6">
-              <BadgeForm />
+              <BadgeForm
+                onChange={this.handleChange}
+                formValues={this.state.form}
+              />
             </div>
           </div>
         </div>
