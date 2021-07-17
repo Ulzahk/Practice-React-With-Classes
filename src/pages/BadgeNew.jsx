@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import Badge from "../components/Badge";
+import BadgeForm from "../components/BadgeForm";
 import logo from "../images/badge-header.svg";
 import "./styles/BadgeNew.css";
 export default class BadgeNew extends Component {
@@ -13,7 +14,7 @@ export default class BadgeNew extends Component {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col">
+            <div className="col-6">
               <Badge
                 avatarUrl="https://avatars.githubusercontent.com/u/46821988?v=4"
                 firstName="Francisco"
@@ -21,6 +22,9 @@ export default class BadgeNew extends Component {
                 jobTitle="Backend Developer"
                 twitter="Ulzahk"
               />
+            </div>
+            <div className="col-6">
+              <BadgeForm />
             </div>
           </div>
         </div>
