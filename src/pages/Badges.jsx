@@ -49,7 +49,7 @@ export default class Badges extends Component {
           },
         ],
       });
-    }, 3000);
+    }, 100);
   }
   componentDidUpdate(prevProps, prevState) {
     console.log("5. componentDidUpdate()");
