@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import BadgeList from "../components/BadgesList";
+import PageLoading from "../components/PageLoading";
+import PageError from "../components/PageError";
 import confLogo from "../images/badge-header.svg";
 import API from "../api";
 import "./styles/Badges.css";
@@ -25,10 +27,10 @@ export default class Badges extends Component {
   }
   render() {
     if (this.state.loading) {
-      return "Loading...";
+      return <PageLoading />;
     }
     if (this.state.error) {
-      return `Error: ${this.state.error.message}`;
+      return <PageError error={this.state.error} />;
     }
     return (
       <Fragment>
