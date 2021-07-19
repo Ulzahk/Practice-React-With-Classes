@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import Badge from "../components/Badge";
+import DeleteBadgeModal from "../components/DeleteBadgeModal";
 import confLogo from "../images/platziconf-logo.svg";
 import "./styles/BadgeDetails.css";
 
@@ -44,12 +45,14 @@ export default function BadgeDetails(props) {
               </Link>
             </div>
             <div>
-              <button
-                className="btn btn-danger"
-                to={`/badges/${badge.id}/edit`}
-              >
-                Edit
+              <button onClick={props.onOpenModal} className="btn btn-danger">
+                Delete
               </button>
+              <DeleteBadgeModal
+                isOpen={props.modalIsOpen}
+                onClose={props.onCloseModal}
+                onDeleteBadge={props.onDeleteBadge}
+              />
             </div>
           </div>
         </div>

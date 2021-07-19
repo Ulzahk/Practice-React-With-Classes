@@ -316,15 +316,6 @@
       "avatarUrl": "https://www.gravatar.com/avatar/70b2d26d624ea573e2f4092d6656fe1f?d=identicon"
     },
     {
-      "id": "058d574c-4b67-4607-aae5-d00cfe257182",
-      "firstName": "Emile",
-      "lastName": "Paucek",
-      "email": "Titus_Cremin15@yahoo.com",
-      "jobTitle": "Internal Marketing Manager",
-      "twitter": "EmilePaucek04688",
-      "avatarUrl": "https://www.gravatar.com/avatar/6d395ba4955de273f3f28f9fa0a6641b?d=identicon"
-    },
-    {
       "id": "3c7c327f-1aca-41eb-8592-9257eafef4a8",
       "firstName": "Rowan",
       "lastName": "Boehm",
@@ -440,14 +431,6 @@
       "jobTitle": "Lawyer",
       "twitter": "ckaufmanpr",
       "id": "npaYZKI"
-    },
-    {
-      "firstName": "Francisco Javier",
-      "lastName": "Suarez Verdugo",
-      "email": "ulzahk@gmail.com",
-      "jobTitle": "Developer",
-      "twitter": "ulzahk",
-      "id": "olBnkdP"
     }
   ]
 }
