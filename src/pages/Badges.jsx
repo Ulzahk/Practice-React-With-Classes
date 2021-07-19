@@ -17,6 +17,7 @@ export default class Badges extends Component {
     this.setState({ loading: true, error: null });
     try {
       const data = await API.badges.list();
+      data.reverse();
       this.setState({ loading: false, data: data });
     } catch (error) {
       this.setState({ loading: false, error: error });

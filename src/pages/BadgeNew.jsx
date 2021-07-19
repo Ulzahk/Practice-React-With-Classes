@@ -1,11 +1,15 @@
 import React, { Component, Fragment } from "react";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
+import PageLoading from "../components/PageLoading";
+import PageError from "../components/PageError";
 import logo from "../images/platziconf-logo.svg";
 import API from "../api";
 import "./styles/BadgeNew.css";
 export default class BadgeNew extends Component {
   state = {
+    loading: false,
+    error: null,
     form: {
       firstName: "",
       lastName: "",
@@ -28,11 +32,15 @@ export default class BadgeNew extends Component {
     try {
       await API.badges.create(this.state.form);
       this.setState({ loading: false });
+      this.props.history.push("/badges");
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
   };
   render() {
+    if (this.state.loading) {
+      return <PageLoading />;
+    }
     const { form } = this.state;
     return (
       <Fragment>
@@ -60,6 +68,7 @@ export default class BadgeNew extends Component {
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
                 formValues={this.state.form}
+                error={this.state.error}
               />
             </div>
           </div>
