@@ -2,28 +2,15 @@ import React, { Component } from "react";
 
 export default class BadgeForm extends Component {
   state = {};
-  // handleChange = event => {
-  //   // console.log({
-  //   //   name: event.target.name,
-  //   //   value: event.target.value,
-  //   // });
-  //   this.setState({
-  //     [event.target.name]: event.target.value,
-  //   });
-  // };
   handleClick = event => {
     console.log("Button was clicked");
-  };
-  handleSubmit = event => {
-    event.preventDefault();
-    console.log(this.state);
   };
   render() {
     const { onChange, formValues } = this.props;
     return (
       <div>
         <h1>New Attendant</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First Name</label>
             <input
