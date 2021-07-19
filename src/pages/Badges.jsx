@@ -4,7 +4,7 @@ import BadgeList from "../components/BadgesList";
 import PageLoading from "../components/PageLoading";
 import PageError from "../components/PageError";
 import MiniLoader from "../components/MiniLoader";
-import confLogo from "../images/badge-header.svg";
+import confLogo from "../images/platziconf-logo.svg";
 import API from "../api";
 import "./styles/Badges.css";
 
