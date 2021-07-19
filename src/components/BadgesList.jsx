@@ -42,7 +42,12 @@ export default class BadgeList extends Component {
         {this.props.badges.map(badge => {
           return (
             <li key={badge.id}>
-              <BadgesListItem badge={badge} />
+              <Link
+                className="text-reset text-decoration-none"
+                to={`/badges/${badge.id}/edit`}
+              >
+                <BadgesListItem badge={badge} />
+              </Link>
             </li>
           );
         })}

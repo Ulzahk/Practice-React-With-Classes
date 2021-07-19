@@ -1,15 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 export default class BadgeForm extends Component {
   state = {};
-  handleClick = event => {
-    console.log("Button was clicked");
-  };
   render() {
     const { onChange, formValues } = this.props;
     return (
-      <div>
-        <h1>New Attendant</h1>
+      <Fragment>
         <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First Name</label>
@@ -68,7 +64,7 @@ export default class BadgeForm extends Component {
             <p className="text-danger">{this.props.error.message}</p>
           ) : null}
         </form>
-      </div>
+      </Fragment>
     );
   }
 }
