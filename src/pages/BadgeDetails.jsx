@@ -1,11 +1,19 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import Badge from "../components/Badge";
 import DeleteBadgeModal from "../components/DeleteBadgeModal";
 import confLogo from "../images/platziconf-logo.svg";
 import "./styles/BadgeDetails.css";
 
+function useIncreaseCount(max) {
+  const [count, setCount] = useState(0);
+  if (count > max) {
+    setCount(0);
+  }
+  return [count, setCount];
+}
 export default function BadgeDetails(props) {
+  const [count, setCount] = useIncreaseCount(4);
   const { badge } = props;
   return (
     <Fragment>
@@ -36,6 +44,14 @@ export default function BadgeDetails(props) {
           </div>
           <div className="col">
             <h2>Actions</h2>
+            <button
+              className="btn btn-primary mb-4"
+              onClick={() => {
+                setCount(count + 1);
+              }}
+            >
+              Increase Count {count}
+            </button>
             <div>
               <Link
                 className="btn btn-primary mb-4"
