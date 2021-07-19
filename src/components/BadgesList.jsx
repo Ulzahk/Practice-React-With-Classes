@@ -37,7 +37,6 @@ function useSearchBadges(badges) {
   }, [badges, query]);
   return { query, setQuery, filteredBadges };
 }
-
 export default function BadgeList(props) {
   const badges = props.badges;
   const { query, setQuery, filteredBadges } = useSearchBadges(badges);
